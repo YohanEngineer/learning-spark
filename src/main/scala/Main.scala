@@ -4,6 +4,14 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
 object Main {
   def main(args: Array[String]): Unit = {
     firstExample()
+    //    crud()
+    //    loopingWhile()
+    //    loopingFor()
+    //    println(max(2, 3))
+    //    println(max(8, 6))
+    //    anonymousFunction()
+    //    currying()
+    //    datastructures()
   }
 
   def firstExample(): Unit = {
