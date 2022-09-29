@@ -23,7 +23,7 @@ In order to create the cluster, you have to setup 4 VMs with the following hardw
 
 In order to create the cluster, you have to set up the network of the cluster like in this screen :
 
-![alt text](Hadoop network.png)
+![alt text](https://github.com/YohanEngineer/learningSpark/blob/main/Hadoop%20network.png)
 
 For this cluster, we used and configured the network with NETPLAN. We configured the YAML
 file of netplan that can be found here in each VM :
