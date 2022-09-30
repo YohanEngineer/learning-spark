@@ -11,12 +11,13 @@ ESIPE-Creteil/Etudiants/ING3/Data/Hadoop Cluster
 
 ### Hardware configuration
 
-In order to create the cluster, you have to setup 4 VMs with the following hardware :
+In order to create the cluster, you have to setup 4 VMs with the following hardware and software:
 <ul>
 <li> CPU : 4
 <li> RAM : 4 GB
 <li> HDD : 32 GB
 <li> Linux Ubuntu 18.04.4-live-server </li>
+<li> Java 1.8 </li>
 </ul>
 
 ### Network
