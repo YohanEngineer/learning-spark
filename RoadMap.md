@@ -37,6 +37,25 @@ ssh administrator@172......
 
 Le password : toto
 
+Pour vérifier que le cluster tourne il faut taper la commande :
+
+```bash
+jps
+```
+
+Si le seul processus qui s'affiche s'appelle jps, alors le cluster doit être lancé avec la commande :
+
+```bash
+start-dfs.sh
+```
+
+Attention quand vous avez terminé, n'oublier pas d'éteindre le cluster avec :
+
+```bash
+stop-dfs.sh
+```
+ATTENTION, merci de prévenir si vous travaillez sur le cluster via le groupe Whatsapp.
+
 L'objectif est de réussir depuis le namenode à uploader des fichiers dans HDFS, créer des répertoires, lire le contenu des fichiers, les déplacer d'un répertoire à un autre. Télécharger des fichiers stockés dans HDFS sur le namenode.
 
 [HDFS DFS Commands](https://hadoop.apache.org/docs/r3.3.1/hadoop-project-dist/hadoop-common/FileSystemShell.html)
@@ -51,6 +70,14 @@ L'objectif est le même que [Manipuler des fichiers et des dataframes avec Spark
 
 La manipulation faite précédemment depuis votre ordinateur via IntelliJ vers le namenode doit maintenant être faite avec un jar déployé sur le namenode.
 Vous devez utiliser la commande Spark Submit pour que le jar soit lancé via le ressource manager Yarn.
+
+Pour lancer Yarn sur le cluster, le cluster doit être lancé.
+
+Et vous devez utiliser cette commande :
+
+```bash
+start-yarn.sh
+```
 
 [SBT Build](https://alvinalexander.com/scala/sbt-how-to-compile-run-package-scala-project/)
 
