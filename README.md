@@ -164,6 +164,16 @@ stop-dfs.sh
 
 #### Setting Spark Master
 
+Make sure HDFS is running well.
+
+Then use this command :
+
+```bash 
+hdfs dfs -mkdir -p /spark-logs
+```
+
+To launch spark master use the following command :
+
 ```bash 
 /spark/sbin/start-master.sh --ip 192.168.1.100
 ```
@@ -177,6 +187,9 @@ On each datanode run the following command :
 ```
 
 #### Spark-Submit
+
+
+To submit an application use the following command :
 
 ```bash 
 spark-submit --master spark://192.168.1.100:7077 --class Main --deploy-mode cluster hdfs://192.168.1.100:9000/user/administrator/testing.jar
