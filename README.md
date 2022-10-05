@@ -131,14 +131,53 @@ YOU ARE THE KING/QUEEN :crown: , you sucessfully set up the network of your clus
 ### Installation of Hadoop
 
 [Hadoop installation with Spark By Example Website](https://sparkbyexamples.com/hadoop/apache-hadoop-installation/)
-### Configuration of Yarn
-
-[Configuration of Yarn with Spark By Example Website](https://sparkbyexamples.com/hadoop/yarn-setup-and-run-map-reduce-program/)
 
 ### Installation of Spark
 
 [Installation of Spark with Spark By Example Website](https://sparkbyexamples.com/spark/spark-setup-on-hadoop-yarn/)
 
+### Useful commands 
 
+#### HDFS
 
+```bash 
+start-dfs.sh
+```
 
+```bash 
+hdfs dfs -mkdir /user/
+
+hdfs dfs -mkdir /user/test
+
+hdfs dfs -put example.json /user/test
+
+hdfs dfs -ls
+
+hdfs dfs -cat myfile.csv
+
+hdfs dfs -rm -r example.json /user/test/…
+```
+
+```bash 
+stop-dfs.sh
+```
+
+#### Setting Spark Master
+
+```bash 
+/spark/sbin/start-master.sh --ip 192.168.1.100
+```
+
+#### Setting Spark Worker
+
+On each datanode run the following command :
+
+```bash 
+/home/administrator/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://192.168.1.100:7077 --cores 2 --memory 3G
+```
+
+#### Spark-Submit
+
+```bash 
+spark-submit --master spark://192.168.1.100:7077 --class Main --deploy-mode cluster hdfs://192.168.1.100:9000/user/administrator/testing.jar
+```
