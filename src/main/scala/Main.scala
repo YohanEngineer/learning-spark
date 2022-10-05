@@ -1,5 +1,6 @@
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
-import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.{DataFrame, SQLContext, SparkSession}
+
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -15,7 +16,7 @@ object Main {
   }
 
   def firstExample(): Unit = {
-    val sparkSession = SparkSession.builder().appName("My first Spark APP").master("local").getOrCreate()
+    val sparkSession = SparkSession.builder().appName("My first Spark APP").master("spark://192.168.1.100:7077").getOrCreate()
     val schema = StructType(
       Seq(
         StructField("nom", StringType),
@@ -27,9 +28,11 @@ object Main {
       .read
       .schema(schema)
       .option("header", true)
-      .csv("data")
+      .csv("hdfs://192.168.1.100:9000/user/administrator/data/")
 
     data.show()
+
+    data.write.csv("hdfs://192.168.1.100:9000/user/administrator/file.csv")
     data.printSchema()
   }
 
