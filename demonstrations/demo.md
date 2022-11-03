@@ -1,24 +1,24 @@
-#Démonstration du prototype 
+# Démonstration du prototype 
 
-###Etape 1 : Obtenir le contenu du répertoire bronze.
+### Etape 1 : Obtenir le contenu du répertoire bronze.
 
 ```
 hdfs dfs -ls /user/bronze/json/
 ```
 
-###Etape 2 : Obtenir le contenu du répertoire silver.
+### Etape 2 : Obtenir le contenu du répertoire silver.
 
 ```
 hdfs dfs -ls /user/silver/pollution/
 ```
 
-###Etape 3 : Lancer le traitement.
+### Etape 3 : Lancer le traitement.
 
 Allez sur l'interface graphique de Airflow, ouvrir le dag **data_pipeline_pollution**.
 
 Puis lancer le dag.
 
-###Etape 4 : Afficher le résultat du traitement/DAG.
+### Etape 4 : Afficher le résultat du traitement/DAG.
 
 ```
 hdfs dfs -ls /user/bronze/json/
@@ -32,7 +32,7 @@ hdfs dfs -ls /user/bronze/json/2022-11-04/
 hdfs dfs -ls /user/silver/pollution/
 ```
 
-###Etape 5 : Vider la table pollution. 
+### Etape 5 : Vider la table pollution. 
 
 Sur la machine epinode-factory, il faut vider la table pollution.
 
@@ -47,13 +47,13 @@ truncate pollution;
 select * from pollution;
 ```
 
-###Etape 6 : Lancer le traitement d'ingestion dans MySQL.
+### Etape 6 : Lancer le traitement d'ingestion dans MySQL.
 
 Allez sur l'interface graphique de Airflow, ouvrir le dag **data_to_mysql**.
 
 Lancer le dag.
 
-###Etape 7 : Vérifier le contenu de la table pollution.
+### Etape 7 : Vérifier le contenu de la table pollution.
 
 Sur la machine epinode-factory, il faut vérifier le contenu de la table pollution.
 
@@ -61,7 +61,7 @@ Sur la machine epinode-factory, il faut vérifier le contenu de la table polluti
 select * from pollution;
 ```
 
-###Etape 8 : Regarder les dashboards.
+### Etape 8 : Regarder les dashboards.
 
 Se connecter à l'adresse IP suivante : 
 
