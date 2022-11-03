@@ -96,6 +96,10 @@ L'objectif est de réussir à récupérer des données du web puis les stocker d
 <br/>
 [Récuperer des données d'une API](https://www.askpython.com/python/examples/pull-data-from-an-api)
 
+### Apprendre à utiliser Dash 
+
+[Dashboard en utilisant Python](https://dash.plotly.com/introduction)
+
 ### Apprendre à utiliser Docker
 
 [Docker résumé en 7 minutes](https://www.youtube.com/watch?v=gAkwW2tuIqE&list=WL&index=18&ab_channel=Fireship)
@@ -103,9 +107,7 @@ L'objectif est de réussir à récupérer des données du web puis les stocker d
 [Apprendre Docker](https://www.youtube.com/watch?v=eGz9DS-aIeY)
 
 [Aller plus loin, plus haut...](https://www.youtube.com/watch?v=p28piYY_wv8&list=WL&index=6&ab_channel=Amigoscode)
-### Apprendre à utiliser Spring Boot avec MongoDB
 
-[Apprendre Mongo avec Spring](https://www.youtube.com/watch?v=ssj0CGxv60k&list=WL&index=13&t=3s&ab_channel=Amigoscode)
 
 ### Apprendre à utiliser Jenkins
 
